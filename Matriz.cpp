@@ -54,7 +54,7 @@ const int Matriz::getFila()const{
 const float Matriz::getNumero(int i,int j)const{
     return *(*(matriz+i)+j);
 }
-float Matriz::setNumero(int i,int j){
+float Matriz::setN(int i,int j){
     cin>>*(*(matriz+i)+j);
 }
 float Matriz::setN(int i,int j,float M){
@@ -68,4 +68,7 @@ float Matriz::LLenar(){
             
         }
     }
+}
+float Matriz::Trans(){
+	
 }
