@@ -4,13 +4,15 @@ using std::cout;
 using std::endl;
 #include"Matriz.hpp"
 #include"Compleja.hpp"
+#include"Inversa.hpp"
 
 int main(){
-	Compleja *ptrE1= new Compleja(3,3);
+	Inversa *ptrE1= new Inversa(3,3);
     ptrE1->LLenar();
 	cout<<*ptrE1;
     cout<<endl;
-    ptrE1->Trans();
+    ptrE1->Metodo();
+   
 	
 
 

@@ -38,7 +38,7 @@ istream &operator>>(istream &entrada,Compleja &C1){
        for(int i=0;i<C1.getFila();i++){
            for(int j=0;j<C1.getColumna();j++){
                cout<<"ingrese la parte real"<<endl;
-               C1.setNumero(i,j);
+               C1.setN(i,j);
                cout<<"ingrese la parte imaginaria"<<endl;
                C1.setIM(i,j);
            }
@@ -159,6 +159,7 @@ float Compleja::LLenar(){
     }
 }
 float Compleja::Trans(){
+	Matriz::Trans();
     for(int i=0;i<this->getColumna();i++){
         for(int j=0;j<this->getFila();j++){
             cout<<this->getNumero(j,i);
