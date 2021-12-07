@@ -4,6 +4,8 @@ using std::cout;
 using std::endl;
 #include<string>
 #include<stdlib.h>
+#include<iomanip>
+#include<ctime>
 #include"Matriz.hpp"
 
 
@@ -57,4 +59,13 @@ float Matriz::setNumero(int i,int j){
 }
 float Matriz::setN(int i,int j,float M){
     *(*(matriz+i)+j)=M;
+}
+float Matriz::LLenar(){
+    srand(time(NULL));
+    for(int i=0;i<this->getFila();i++){
+        for(int j=0;j<this->getColumna();j++){
+            this->setN(i,j,rand() % 20);
+            
+        }
+    }
 }

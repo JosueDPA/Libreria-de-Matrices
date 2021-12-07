@@ -12,6 +12,9 @@ class Matriz{
     float setNumero(int ,int );
     float setN(int ,int ,float);
 
+    virtual float LLenar();
+    virtual float Trans();
+
 
 
 

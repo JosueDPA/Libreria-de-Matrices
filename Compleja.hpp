@@ -12,6 +12,7 @@ class Compleja:public Matriz{
        friend Compleja &operator-(Compleja &,Compleja &);
        friend Compleja &operator*(Compleja &,Compleja &);
        friend Compleja &operator*(Compleja &,float &);
+
        public:
         Compleja(int ,int );
         Compleja(Compleja &,Matriz &);
@@ -19,6 +20,8 @@ class Compleja:public Matriz{
         const float getImg(int , int )const;
         float setIM(int ,int );
         float SetIMG(int ,int ,float );
+        float LLenar();
+        float Trans();
         
 
 

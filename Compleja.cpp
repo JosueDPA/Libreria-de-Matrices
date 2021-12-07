@@ -4,6 +4,8 @@ using std::cout;
 using std::endl;
 #include<string>
 #include<stdlib.h>
+#include<iomanip>
+#include<ctime>
 #include"Compleja.hpp" 
 
 
@@ -11,6 +13,11 @@ Compleja::Compleja(int fila,int columna):Matriz(fila,columna){
      img= new float*[fila];
      for(int i=0;i<columna;i++){
          img[i]= new float[columna];
+     }
+     for(int i=0;i<fila;i++){
+         for(int j=0;j<columna;j++){
+             img[i][j]=0;
+         }
      }
 }
 Compleja::Compleja(Compleja &C1,Matriz &C2):Matriz(C2){
@@ -51,6 +58,7 @@ ostream &operator<<(ostream &salida,Compleja &C1){
         }
         cout<<endl;
     }
+    
 }
 Compleja &operator+(Compleja &C1,Compleja &C2){
     int A=C1.getFila();
@@ -140,4 +148,27 @@ const float Compleja::getImg(int i,int j)const{
 }
 float Compleja::SetIMG(int i,int j,float numero){
        *(*(img+i)+j)=numero;
+}
+float Compleja::LLenar(){
+    Matriz::LLenar();
+    srand(time(NULL));
+    for(int i=0;i<this->getFila();i++){
+        for(int j=0;j<this->getColumna();j++){
+            this->SetIMG(i,j,rand() % 20);
+        }
+    }
+}
+float Compleja::Trans(){
+    for(int i=0;i<this->getColumna();i++){
+        for(int j=0;j<this->getFila();j++){
+            cout<<this->getNumero(j,i);
+            if(this->getImg(j,i)>=0){
+             cout<<"+"<<this->getImg(j,i)<<"i"<<"  ";
+            }
+            else{
+                cout<<this->getImg(j,i)<<"i"<<"  ";
+            }
+        }
+        cout<<endl;
+    }
 }
