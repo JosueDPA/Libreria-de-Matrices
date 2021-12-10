@@ -23,24 +23,7 @@ Inversa::Inversa(int fila,int columna):Matriz(fila,columna){
         }
     }
 }
-istream &operator>>(istream &entrada,Inversa &C1){
-    for(int i=0;i<C1.getFila();i++){
-        for(int j=0;j<C1.getColumna();j++){
-            C1.setN(i,j);
-        }
-    }
-}
-ostream &operator<<(ostream &Salida,Inversa &C1){
-      for(int i=0;i<C1.getFila();i++){
-          for(int j=0;j<C1.getColumna();j++){
-              cout<<C1.getNumero(i,j)<<"  ";
 
-          }
-          cout<<endl;
-      }
-
-
-}
 float Inversa::Metodo(){
     for(int i=0;i<this->getFila();i++)
 	{
