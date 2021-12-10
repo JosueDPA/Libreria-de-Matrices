@@ -7,8 +7,7 @@ using std::ostream;
 
 class Inversa:public Matriz{
 
-       friend istream &operator>>(istream &,Inversa &);
-	friend ostream &operator<<(ostream &,Inversa &);
+       
        public:
         Inversa(int ,int );
         float setI(int ,int );

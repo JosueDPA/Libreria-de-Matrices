@@ -2,20 +2,22 @@
 using std::cin;
 using std::cout;
 using std::endl;
+#include<stdlib.h>
 #include"Matriz.hpp"
 #include"Compleja.hpp"
 #include"Inversa.hpp"
+#include"Simetrica.hpp"
 
 int main(){
-	Inversa *ptrE1= new Inversa(3,3);
-    ptrE1->LLenar();
-	cout<<*ptrE1;
-    cout<<endl;
-    ptrE1->Metodo();
-   
-	
+	Simetrica *ptre1=new Simetrica(3);
+	Simetrica *ptre2=new Simetrica(3);
 
 
+    ptre1->LLenar();
+	ptre2->LLenar();
+	cout<<*ptre1;
+	cout<<endl;
+	cout<<*ptre2; 
 
     
     

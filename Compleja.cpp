@@ -151,12 +151,14 @@ float Compleja::SetIMG(int i,int j,float numero){
 }
 float Compleja::LLenar(){
     Matriz::LLenar();
-    srand(time(NULL));
+    int B=this->getB();
+    srand(B);
     for(int i=0;i<this->getFila();i++){
         for(int j=0;j<this->getColumna();j++){
             this->SetIMG(i,j,rand() % 20);
         }
     }
+    contar();
 }
 float Compleja::Trans(){
 	Matriz::Trans();
