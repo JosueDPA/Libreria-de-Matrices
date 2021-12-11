@@ -176,7 +176,7 @@ float Matriz::Trans(){
 int Matriz::setB(int b){
 	this->b=b;
 }
-int Matriz::getB(){
+ int Matriz::getB(){
 	return this->b;
 }
 int Matriz::contar(){

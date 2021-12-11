@@ -7,10 +7,11 @@ using std::endl;
 #include"Compleja.hpp"
 #include"Inversa.hpp"
 #include"Simetrica.hpp"
+#include"Traingular.hpp"
 
 int main(){
-	Simetrica *ptre1=new Simetrica(3);
-	Simetrica *ptre2=new Simetrica(3);
+	Traingular *ptre1= new Traingular(3,0);
+	Traingular *ptre2= new Traingular(3,1);
 
 
     ptre1->LLenar();
