@@ -185,6 +185,7 @@ Matriz::~Matriz(){
 }
 float Matriz::Trans(){
 }
+
 void Matriz::Help(){
 	cout<<"Hola Ahora estas usando mi libreria"<<endl;
 	cout<<endl;
@@ -251,3 +252,5 @@ void Matriz::Help(){
 
 
 }
+
+
