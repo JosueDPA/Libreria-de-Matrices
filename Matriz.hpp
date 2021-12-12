@@ -26,6 +26,7 @@ class Matriz{
     int setB(int);
     int getB();
     int contar();
+    void Help();
 
     virtual float LLenar();
     virtual float Trans();

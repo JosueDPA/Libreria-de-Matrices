@@ -7,7 +7,8 @@ using std::endl;
 #include"Traingular.hpp"
 
 int main(){
-	
+	Matriz M(3);
+	M.Help();
 	
     return 0;
 }
