@@ -16,6 +16,7 @@ class Compleja:public Matriz{
        public:
         Compleja(int ,int );
         Compleja(Compleja &,Matriz &);
+        ~Compleja();
         
         const float getImg(int , int )const;
         float setIM(int ,int );

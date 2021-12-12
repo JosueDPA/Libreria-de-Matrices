@@ -42,4 +42,12 @@ if(this->N==1){
 } 
 contar();
 }
-
+float Traingular::Trans(){
+    Matriz::Trans();
+    for(int i=0;i<this->getColumna();i++){
+        for(int j=0;j<this->getFila();j++){
+            cout<<this->getNumero(j,i)<<"  ";
+        }
+        cout<<endl;
+    }
+}

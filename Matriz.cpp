@@ -20,17 +20,12 @@ Matriz::Matriz(int fila,int columna){
     }
     
 }
-Matriz::Matriz(){
-    this->fila=3;
-    this->columna=3;
+Matriz::Matriz(int columna){
+    this->fila=columna;
+    this->columna=1;
     matriz= new float*[fila];
-    for(int i=0;i<this->columna;i++){
-        matriz[i]= new float[columna];
-    }
     for(int i=0;i<this->fila;i++){
-        for(int j=0;j<this->columna;j++){
-            *(*(matriz+i)+j)=0;
-        }
+        matriz[i]= new float[1];
     }
 
 }
@@ -144,6 +139,10 @@ Matriz &operator *(Matriz &M1,float &Escalar){
 	}
 	return *(new Matriz(Result));
 }
+// funciones miembro
+//operador []
+
+
 const int Matriz::getColumna()const{
     return this->columna;
 }
@@ -161,7 +160,7 @@ float Matriz::setN(int i,int j,float M){
 }
 float Matriz::LLenar(){
 	int B=this->getB();
-    srand(time(NULL));
+    srand(time(NULL)+B);
     for(int i=0;i<this->getFila();i++){
         for(int j=0;j<this->getColumna();j++){
             this->setN(i,j,rand() % 100);
@@ -182,5 +181,8 @@ int Matriz::setB(int b){
 int Matriz::contar(){
 	b=b+2;
 }
+Matriz::~Matriz(){
+	delete[] this->matriz;
 
+}
 
