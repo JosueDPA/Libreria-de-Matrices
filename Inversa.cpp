@@ -74,3 +74,6 @@ float Inversa::setI(int i,int j){
 float Inversa::LLenar(){
     Matriz::LLenar();
 }
+Inversa::~Inversa(){
+    delete[] this->I;
+}

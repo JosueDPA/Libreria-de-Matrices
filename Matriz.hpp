@@ -11,10 +11,13 @@ class Matriz{
     friend Matriz  &operator -(Matriz  &,Matriz &);
     friend Matriz  &operator *(Matriz  &,Matriz &);
     friend Matriz  &operator *(Matriz  &,float  &);
+    
     public:
     Matriz(int ,int );
     Matriz(Matriz &);
-    Matriz();
+    Matriz(int );
+	~Matriz();
+   
     const int getFila()const;
     const int getColumna()const;
     const float  getNumero(int ,int )const;

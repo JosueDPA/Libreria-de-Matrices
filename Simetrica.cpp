@@ -30,3 +30,15 @@ float Simetrica::LLenar(){
 
     
 }
+float Simetrica::Confirmar(){
+    for(int i=0;i<this->getFila();i++){
+        for(int j=0;j<this->getColumna();j++){
+            if(this->getNumero(i,j)==this->getNumero(j,i)){
+
+            }
+            else{
+                cout<<"la matriz no es simetrica"<<endl;
+            }
+        }
+    }
+}

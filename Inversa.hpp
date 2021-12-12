@@ -10,6 +10,7 @@ class Inversa:public Matriz{
        
        public:
         Inversa(int ,int );
+       ~Inversa();
         float setI(int ,int );
         float setI(int ,int ,float );
         const float getI(int ,int )const;

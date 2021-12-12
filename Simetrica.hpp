@@ -10,6 +10,7 @@ using std::ostream;
 class Simetrica:public Matriz{
      public:
      Simetrica(int );
+     float Confirmar();
      float LLenar();
 
 

@@ -138,6 +138,7 @@ Compleja &operator*(Compleja &C1,float Escalar){
     }
 }
 
+
 //funciones set
 float Compleja::setIM(int i,int j){
     cin>>*(*(img+i)+j);
@@ -151,8 +152,8 @@ float Compleja::SetIMG(int i,int j,float numero){
 }
 float Compleja::LLenar(){
     Matriz::LLenar();
-    int B=this->getB();
-    srand(B);
+    int b=this->getB();
+    srand(time(NULL)+b);
     for(int i=0;i<this->getFila();i++){
         for(int j=0;j<this->getColumna();j++){
             this->SetIMG(i,j,rand() % 20);
@@ -174,4 +175,7 @@ float Compleja::Trans(){
         }
         cout<<endl;
     }
+}
+Compleja::~Compleja(){
+    delete[] this->img;
 }
