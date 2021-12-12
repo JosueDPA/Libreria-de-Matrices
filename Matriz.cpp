@@ -169,9 +169,7 @@ float Matriz::LLenar(){
     }
 	contar();
 }
-float Matriz::Trans(){
-	
-}
+
 int Matriz::setB(int b){
 	this->b=b;
 }
