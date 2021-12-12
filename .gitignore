@@ -1,2 +1,6 @@
 *.dev
 *.vscode
+*.layout
+*.o
+*.exe
+*.win
